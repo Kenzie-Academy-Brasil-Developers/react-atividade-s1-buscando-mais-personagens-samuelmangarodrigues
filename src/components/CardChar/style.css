@@ -1,0 +1,64 @@
+* {
+  font-family: "Chakra Petch", sans-serif;
+}
+body h1 {
+  color: black;
+}
+.cardAlive {
+  margin: 30px;
+  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.cardAlive:hover {
+  background-color: green;
+  color: white;
+  transition: 0.5s;
+}
+.cardDied {
+  margin: 30px;
+  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.cardDied:hover {
+  background-color: red;
+  color: white;
+  transition: 0.5s;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jura", sans-serif;
+  color: lightgray;
+  font-size: 20px;
+}
+.imgs {
+  width: 300px;
+}
+.imgs:hover {
+  width: 320px;
+  transition: 0.6s;
+}
+.titles {
+  color: black;
+}
+.contBtns {
+  display: flex;
+  justify-content: space-between;
+}
+.btns {
+  background-color: grey;
+  color: lightgrey;
+  width: 100px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin: 10px;
+}
+.btns:hover {
+  background-color: blue;
+  color: white;
+  transition: 0.5s;
+}
