@@ -4,16 +4,21 @@ import { useState, useEffect } from "react";
 function App() {
   const [characters, setCharacters] = useState([]);
   const [newPage, setNewPage] = useState(1);
-
+  const [next, setNext] = useState([]);
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/character?page=${newPage}`)
       .then((response) => response.json())
-      .then((response) => setCharacters(response.results))
+      .then((response) => {
+        setCharacters(response.results);
+        setNext(response.info.next);
+      })
       .catch((err) => console.log(err));
   }, [newPage]);
 
   const NextPage = () => {
-    setNewPage(newPage + 1);
+    if (next !== null) {
+      setNewPage(newPage + 1);
+    }
   };
   const subClick = () => {
     if (newPage > 1) {
